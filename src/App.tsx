@@ -1,9 +1,9 @@
-import "./App.css";
+import { TestComponents } from "./components/TestComponents";
 
 function App() {
   return (
     <>
-      <p>FrntEnd</p>
+      <TestComponents />
     </>
   );
 }
