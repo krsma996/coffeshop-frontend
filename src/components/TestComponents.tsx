@@ -4,7 +4,8 @@ import { ResultFetchCompoent } from "./ResultFetchCompoent";
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export const TestComponents: React.FC<{}> = () => {
   const [dbString, setCurrentDbString] = useState<string>("");
-  const [fetchedDataDb, setFetchedDataDb] = useState<string>("");
+  const [fromDb, setFromDb] = useState<string>("");
+
   function captureNameFormInput(event: React.ChangeEvent<HTMLInputElement>) {
     const currentValue = event.target.value;
     setCurrentDbString(currentValue);
@@ -21,8 +22,7 @@ export const TestComponents: React.FC<{}> = () => {
         throw new Error(`Error fetching data: ${response.statusText}`);
       }
       const data = await response.text();
-      setFetchedDataDb(data);
-      console.log("Data from backend:", data);
+      setFromDb(data);
     } catch (error) {
       console.error("Error fetching coffee name:", error);
     }
@@ -46,7 +46,7 @@ export const TestComponents: React.FC<{}> = () => {
         <br />
         <input type="button" value="Submit" onClick={getByCoffeName} />
       </form>
-      <ResultFetchCompoent dbString={fetchedDataDb} />
+      <ResultFetchCompoent dbString={fromDb} />
     </>
   );
 };
