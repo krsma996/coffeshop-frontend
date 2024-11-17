@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(145deg, #000, #020202); /* Dodao gradijent */
+  background: linear-gradient(145deg, #000, #020202);
 }
 
 /* Wrapper za formu */
@@ -170,6 +170,6 @@ button:hover {
 
 @keyframes animate {
   100% {
-    filter: hue-rotate(3600deg);
+    filter: hue-rotate(360deg);
   }
 }
