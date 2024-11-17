@@ -13,7 +13,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(145deg, #000, #020202);
+  background-image: url("/src/img/carBackground1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Opcionalno, pozadina se neće pomerati kada skroluješ */
+  min-height: 100vh; /* Osiguraj da pozadina zauzme celu visinu ekrana */
+  margin: 0;
 }
 
 /* Wrapper za formu */
